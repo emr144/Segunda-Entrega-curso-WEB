@@ -185,3 +185,94 @@ footer a {
 footer a:hover {
     color: #44ebeb;
 }
+
+
+/* Media query para pantallas pequeñas (celulares) */
+@media (max-width: 480px) {
+    /* Cambiar el layout grid a una sola columna */
+    #grilla {
+        grid-template-areas:
+        "header"
+        "nav"
+        "producto"
+        "aside"
+        "footer";
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-columns: 1fr; /* 100% del ancho */
+        height: auto; /* Permitir que crezca según el contenido */
+    }
+
+    /* Ajustar la navegación para pantallas pequeñas */
+    nav ul li a {
+        font-size: 14px; /* Tamaño de fuente más pequeño */
+        padding: 8px 15px; /* Ajustar padding en botones */
+        width: 100%; /* Asegura que los enlaces ocupen el 100% del ancho */
+    }
+
+    /* Ajustar el header */
+    header {
+        justify-content: center; /* Centra el logotipo en pantallas pequeñas */
+        padding: 1em;
+    }
+
+    header img {
+        max-width: 120px; /* Limitar el tamaño del logotipo en pantallas pequeñas */
+        height: auto;
+    }
+
+    /* Ajuste de la imagen en el aside */
+    aside img {
+        width: 100%; /* Asegura que la imagen ocupe el ancho completo */
+        height: auto; /* Permite que la altura se ajuste automáticamente */
+    }
+
+    /* Producto (contenido principal) ajustado */
+    #producto {
+        padding: 1em; /* Ajustar el padding para dar espacio en pantallas pequeñas */
+        text-align: center; /* Centrar texto en pantallas pequeñas */
+    }
+
+    /* Ajustar el footer */
+    footer {
+        text-align: center; /* Centrar contenido del footer */
+        padding: 1em;
+    }
+
+    footer a {
+        font-size: 18px; /* Tamaño de iconos de redes sociales reducido */
+        margin: 5px; /* Menor espacio entre iconos */
+    }
+}
+
+
+/* Media query para tablets (ancho entre 481px y 768px) */
+@media (max-width: 768px) {
+    #grilla {
+        grid-template-areas:
+        "header"
+        "nav"
+        "producto"
+        "aside"
+        "footer";
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    /* Ajustar navegación para tablets */
+    nav ul li a {
+        font-size: 16px; /* Tamaño de fuente ligeramente mayor para tablets */
+        padding: 10px 20px;
+    }
+
+    /* Ajustar el header */
+    header img {
+        max-width: 150px;
+    }
+
+    /* Ajustar la imagen del aside */
+    aside img {
+        width: 100%; /* Ocupar todo el ancho */
+        height: auto; /* Mantener proporciones */
+    }
+}
