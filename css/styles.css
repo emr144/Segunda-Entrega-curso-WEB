@@ -81,7 +81,7 @@ header img{
     align-items: center;
 }
 
-#producto h2, #producto h3, #producto h4, #producto p, #producto ul, #producto li{
+#producto h1, #producto h2, #producto h3, #producto p, #producto ul, #producto li{
     margin: 0;
     padding: 0.5em 0; /* Añade espacio vertical entre los elementos */
     text-align: center;
