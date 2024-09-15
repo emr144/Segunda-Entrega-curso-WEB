@@ -1,0 +1,281 @@
+html, body{
+    /* para que el contenedor ocupe todo el ancho y alto de pantalla, luego en la grilla o hacemos para que la grilla ocupe todo el ancho y alto del contenedo */
+    height: 100%;
+    width: 100%;
+    margin:0
+}
+
+#grilla{
+    display: grid;
+    grid-template-areas:
+    "nav header header"
+    "nav producto aside"
+    "nav footer footer" ;
+    grid-template-rows: 20% auto 15%;
+    grid-template-columns: 20% 60% auto ;
+    height: 100%; /* Ocupa el 100% de la altura del contenedor padre */
+    width: 100%; /* Ocupa el 100% de ancho del contenedor padre */
+}
+/* Es el reborde negro que tendra cada cuadricula */
+.border{
+    border: 1px solid black;
+}
+/* asigna elemento <header> al header de la grilla */
+header{
+    grid-area: header;
+}
+/* asigna elemento <footer> al footer de la grilla */
+footer{
+    grid-area: footer;
+}
+
+section#producto{
+    grid-area: producto;
+}
+
+aside{
+    grid-area: aside;
+}
+
+
+/* asigna elemento <nav> al nav de la grilla */
+nav{
+    grid-area: nav;
+
+}
+
+/* formato del header */
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* alinea la imagen a la izquierda del contenedor */
+    background-color: black;
+    padding: 1em;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;/* Incluye el padding y border en el tamaño total del contenedor */
+}
+
+/* Estilo de la imagen dentro del header */
+header img{
+    max-height: 100%;
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    object-fit: contain;
+}
+
+/* estilo del texto en Producto */
+
+#producto{
+    padding: 1em;
+    margin: 0;
+    box-sizing: border-box;/* Incluye el padding en el tamaño total del contenedor */
+    overflow: auto; /* Añade scroll si el contenido se desborda */
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/texturewhiteshapes.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    align-items: center;
+}
+
+#producto h1, #producto h2, #producto h3, #producto p, #producto ul, #producto li{
+    margin: 0;
+    padding: 0.5em 0; /* Añade espacio vertical entre los elementos */
+    text-align: center;
+    list-style: none;
+
+}
+#producto ul {
+    padding-left: 1.5em; /* Añade espacio a la izquierda de la lista */
+}
+
+#producto li {
+    margin-bottom: 0.5em; /* Añade espacio entre los ítems de la lista */
+}
+/* formto de botones en nav */
+
+/* formato del area nav */
+nav{
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    background-image: url('../img/flor.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+/* elimina los puntos */
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+
+/* margen entre los elementos */
+nav ul li{
+    margin-bottom: 1em;
+}
+
+nav ul li a{
+    display: block; 
+    text-align: center; /* centra elemento en forma vertica */
+    padding: 10px 20px;
+    background-color:#db4545 ;
+    color: white;/* color de fuente */
+    text-decoration: none;/* quita el sibrayado */
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);/* Sombra */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones */
+    width: 100%; /* Asegura que el botón se ajuste al contenedor */
+    box-sizing: border-box; /* Incluye el padding en el ancho total del botón */
+    white-space: nowrap; /* Evita que el texto se parta en varias líneas */
+    overflow: hidden; /* Oculta el desbordamiento */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos si el texto es muy largo */
+}
+
+/* efecto hover */
+nav ul li a:hover{
+    background-color: #44ebeb;/* lo cambia de color */
+    transform: translateY(-2px);/* eleva el boton */
+    text-decoration: none;/* quita el sibrayado */
+    color:  #767676;
+
+}
+
+/* efecto cuando presiono el boton */
+nav ul li a:active{
+    transform: translateY(0);/* regrsa a su posicion */
+    box-shadow:0 2px 4px rgba(0, 0, 0, 0.2) ;/* Reduce la sombra */
+}
+
+
+/* estilo para la imagen de iside */
+aside{
+    position: relative;/* posicionamiento de la imagen */
+    overflow: hidden;
+    padding: 0;
+}
+aside img{
+    width: 100% ;
+    height: 100%;
+    object-fit: cover;/* para que la imagen no se deforme */
+}
+
+
+/* estilo para footer */
+
+footer {
+    background-color: black;
+    padding: 20px;
+    color: aliceblue;
+}
+
+footer a {
+    color: #db4545;
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+footer a:hover {
+    color: #44ebeb;
+}
+
+
+/* Media query para pantallas pequeñas (celulares) */
+@media (max-width: 480px) {
+    /* Cambiar el layout grid a una sola columna */
+    #grilla {
+        grid-template-areas:
+        "header"
+        "nav"
+        "producto"
+        "aside"
+        "footer";
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-columns: 1fr; /* 100% del ancho */
+        height: auto; /* Permitir que crezca según el contenido */
+    }
+
+    /* Ajustar la navegación para pantallas pequeñas */
+    nav ul li a {
+        font-size: 14px; /* Tamaño de fuente más pequeño */
+        padding: 8px 15px; /* Ajustar padding en botones */
+        width: 100%; /* Asegura que los enlaces ocupen el 100% del ancho */
+    }
+
+    /* Ajustar el header */
+    header {
+        justify-content: center; /* Centra el logotipo en pantallas pequeñas */
+        padding: 1em;
+    }
+
+    header img {
+        max-width: 120px; /* Limitar el tamaño del logotipo en pantallas pequeñas */
+        height: auto;
+    }
+
+    /* Ajuste de la imagen en el aside */
+    aside img {
+        width: 100%; /* Asegura que la imagen ocupe el ancho completo */
+        height: auto; /* Permite que la altura se ajuste automáticamente */
+    }
+
+    /* Producto (contenido principal) ajustado */
+    #producto {
+        padding: 1em; /* Ajustar el padding para dar espacio en pantallas pequeñas */
+        text-align: center; /* Centrar texto en pantallas pequeñas */
+    }
+
+    /* Ajustar el footer */
+    footer {
+        text-align: center; /* Centrar contenido del footer */
+        padding: 1em;
+    }
+
+    footer a {
+        font-size: 18px; /* Tamaño de iconos de redes sociales reducido */
+        margin: 5px; /* Menor espacio entre iconos */
+    }
+}
+
+
+/* Media query para tablets (ancho entre 481px y 768px) */
+@media (max-width: 768px) {
+    #grilla {
+        grid-template-areas:
+        "header"
+        "nav"
+        "producto"
+        "aside"
+        "footer";
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    /* Ajustar navegación para tablets */
+    nav ul li a {
+        font-size: 16px; /* Tamaño de fuente ligeramente mayor para tablets */
+        padding: 10px 20px;
+    }
+
+    /* Ajustar el header */
+    header img {
+        max-width: 150px;
+    }
+
+    /* Ajustar la imagen del aside */
+    aside img {
+        width: 100%; /* Ocupar todo el ancho */
+        height: auto; /* Mantener proporciones */
+    }
+}
+
+
+/* usar nestin, archivos secundarios, variables, mixing */

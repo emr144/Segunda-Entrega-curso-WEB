@@ -1,0 +1,52 @@
+@import "../utilidades/variables";
+
+// _nav.scss  
+nav {  
+    grid-area: nav;  
+    display: flex;  
+    flex-direction: column;  
+    padding: 1em;  
+    background-image: $nav-background-image;  
+    background-size: cover;  
+    background-position: center;  
+    background-repeat: no-repeat;  
+
+    ul {  
+        list-style: none;  
+        padding: 0;  
+        
+        li {  
+            margin-bottom: 1em;  
+
+            a {  
+                display: block;   
+                text-align: center;  
+                padding: 10px 20px;  
+                background-color: $link-color;  
+                color: white;  
+                text-decoration: none;  
+                border-radius: 5px;  
+                font-size: 16px;  
+                font-weight: bold;  
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+                transition: background-color 0.3s ease, transform 0.2s ease;  
+                width: 100%;  
+                box-sizing: border-box;  
+                white-space: nowrap;  
+                overflow: hidden;  
+                text-overflow: ellipsis;  
+
+                &:hover {  
+                    background-color: $link-hover-color;  
+                    transform: translateY(-2px);  
+                    color: #000000;  
+                }  
+
+                &:active {  
+                    transform: translateY(0);  
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);  
+                }  
+            }  
+        }  
+    }  
+}

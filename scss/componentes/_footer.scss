@@ -1,0 +1,36 @@
+@import "../utilidades/variables";
+
+// _footer.scss  
+footer {  
+    background-color: $footer-background; // Usando la variable específica para el fondo del footer  
+    padding: 20px;  
+    color: aliceblue; // Color del texto  
+
+    text-align: center; // Centrar el contenido del footer  
+
+    // Estilos para los enlaces en el footer  
+    a {  
+        color: $link-color; // Usando la variable para el color del enlace  
+        font-size: 18px; // Tamaño de fuente del enlace  
+        margin: 5px; // Espacio entre los enlaces  
+        text-decoration: none; // Sin subrayado  
+
+        &:hover {  
+            color: $link-hover-color; // Color al pasar el mouse sobre el enlace  
+        }  
+    }  
+    
+    // Si necesitas un estilo adicional para las redes sociales  
+    .social-icons {  
+        margin-top: 10px; // Espacio en la parte superior  
+        
+        a {  
+            font-size: 24px; // Tamaño de icono de redes sociales  
+            margin: 0 10px; // Espaciado horizontal  
+            
+            &:hover {  
+                color: $link-hover-color; // Color al pasar el mouse sobre los iconos sociales  
+            }  
+        }  
+    }  
+}
