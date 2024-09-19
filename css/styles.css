@@ -109,13 +109,13 @@ nav ul li a:active {
   position: relative;
   align-items: center;
 }
-#producto h2, #producto h3, #producto h4, #producto p, #producto ul, #producto li {
+#producto h1, #producto h2, #producto h3, #producto h4, #producto p, #producto ul, #producto li {
   margin: 0;
   padding: 0.5em 0;
   text-align: center;
   list-style: none;
 }
-#producto h2:last-of-type, #producto h3:last-of-type, #producto h4:last-of-type, #producto p:last-of-type, #producto ul:last-of-type, #producto li:last-of-type {
+#producto h1:last-of-type, #producto h2:last-of-type, #producto h3:last-of-type, #producto h4:last-of-type, #producto p:last-of-type, #producto ul:last-of-type, #producto li:last-of-type {
   margin-bottom: 0;
 }
 #producto ul {
