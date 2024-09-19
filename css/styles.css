@@ -9,6 +9,26 @@ aside img {
   object-fit: cover;
 }
 
+.animacion-activa {
+  background-image: url("../img/antes.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  animation: imageSwap 8s infinite;
+}
+@keyframes imageSwap {
+  0% {
+    background-image: url("../img/antes.jpg");
+  }
+  50% {
+    background-image: url("../img/despues.jpg");
+  }
+  100% {
+    background-image: url("../img/antes.jpg");
+  }
+}
+
 footer {
   background-color: #000000;
   padding: 20px;
