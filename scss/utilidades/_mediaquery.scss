@@ -1,5 +1,23 @@
+
+//Definicion de la animacion
+@keyframes imageSwap {
+  0% {
+      background-image: url('../img/antes.jpg');
+  }
+  50% {
+      background-image: url('../img/despues.jpg');
+  }
+  100% {
+      background-image: url('../img/antes.jpg');
+  }
+}
+
+
+
+
 // Media query para pantallas pequeñas (celulares)
 @media (max-width: 480px) {
+
   #grilla {
     grid-template-areas:
       "header"
@@ -31,8 +49,17 @@
   aside img {
     width: 100%; // Asegura que la imagen ocupe el ancho completo
     height: auto; // Permite que la altura se ajuste automáticamente
+    
   }
+  .animacion-activa {
+    background-image: url('../img/antes.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw; /* Ancho del viewport */
+    height: 100vh; /* Alto del viewport */
+    animation: imageSwap 8s infinite;
 
+}
   #producto {
     padding: 1em; // Ajustar el padding para dar espacio en pantallas pequeñas
     text-align: center; // Centrar texto en pantallas pequeñas
@@ -48,6 +75,13 @@
     margin: 5px; // Menor espacio entre iconos
   }
 }
+
+
+
+
+
+
+
 
 // Media query para tablets (ancho entre 481px y 768px)
 @media (max-width: 768px) {
@@ -76,4 +110,13 @@
     width: 100%; // Ocupar todo el ancho
     height: auto; // Mantener proporciones
   }
+
+  .animacion-activa {
+    background-image: url('../img/antes.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw; /* Ancho del viewport */
+    height: 100vh; /* Alto del viewport */
+    animation: imageSwap 8s infinite;}
+
 }

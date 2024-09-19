@@ -183,6 +183,17 @@ nav {
   grid-area: nav;
 }
 
+@keyframes imageSwap {
+  0% {
+    background-image: url("../img/antes.jpg");
+  }
+  50% {
+    background-image: url("../img/despues.jpg");
+  }
+  100% {
+    background-image: url("../img/antes.jpg");
+  }
+}
 @media (max-width: 480px) {
   #grilla {
     grid-template-areas: "header" "nav" "producto" "aside" "footer";
@@ -206,6 +217,14 @@ nav {
   aside img {
     width: 100%;
     height: auto;
+  }
+  .animacion-activa {
+    background-image: url("../img/antes.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100vw; /* Ancho del viewport */
+    height: 100vh; /* Alto del viewport */
+    animation: imageSwap 8s infinite;
   }
   #producto {
     padding: 1em;
@@ -237,6 +256,14 @@ nav {
   aside img {
     width: 100%;
     height: auto;
+  }
+  .animacion-activa {
+    background-image: url("../img/antes.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100vw; /* Ancho del viewport */
+    height: 100vh; /* Alto del viewport */
+    animation: imageSwap 8s infinite;
   }
 }
 
