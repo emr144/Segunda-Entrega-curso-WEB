@@ -87,6 +87,7 @@ nav ul li a {
 }
 nav ul li a:hover {
   background-color: #2980b9;
+  text-decoration: none;
   transform: translateY(-2px);
   color: #000000;
 }
