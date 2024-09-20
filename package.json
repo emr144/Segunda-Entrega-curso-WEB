@@ -1,7 +1,7 @@
 {
   "name": "segunda-entrega",
   "version": "1.0.0",
-  "description": "https://emr144.github.io/Segunda-Entrega-curso-WEB/index.html",
+  "description": "https://emr144.github.io/Tercera-Entrega-curso-WEB/",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
