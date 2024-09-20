@@ -1,1 +1,1 @@
-https://emr144.github.io/Segunda-Entrega-curso-WEB/index.html
+https://emr144.github.io/Tercera-Entrega-curso-WEB/
