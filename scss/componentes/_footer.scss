@@ -5,8 +5,11 @@ footer {
     background-color: $footer-background; // Usando la variable específica para el fondo del footer  
     padding: 20px;  
     color: aliceblue; // Color del texto  
-
+    width: 100%; // Ocupa el 100% del ancho del contenedor
+    box-sizing: border-box; // Asegura que el padding no desborde el contenedor
     text-align: center; // Centrar el contenido del footer  
+
+  
 
     // Estilos para los enlaces en el footer  
     a {  

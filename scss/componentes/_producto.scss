@@ -11,8 +11,17 @@
     background-repeat: no-repeat;
     position: relative;
     align-items: center;
-  
-    h1, h2, h3, h4, p, ul, li {
+
+    h1 {
+      font-size: 3em; // Tamaño de fuente más grande
+      color: #000000; // Cambia el color del texto (puedes ajustarlo)
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.756); // Agrega sombra suave
+      text-align: center;
+      padding: 20px;
+
+     
+  }  
+    h2, h3, h4, p, ul, li {
       margin: 0;
       padding: 0.5em 0; // Añade espacio vertical entre los elementos
       text-align: center;

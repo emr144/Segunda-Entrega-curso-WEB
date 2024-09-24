@@ -14,16 +14,25 @@ nav {
     ul {  
         list-style: none;  
         padding: 0;  
+
+        img {  
+            max-height: 120px; // Ajusta este valor para controlar la altura de la imagen
+            max-width: auto; // Deja que el ancho se ajuste automáticamente para mantener las proporciones
+            object-fit: contain; // Asegura que la imagen no se deforme
+            display: block; // Elimina cualquier espacio adicional generado por comportamiento inline
+            margin: 10px auto 20px auto;
+        }
         
         li {  
             margin-bottom: 1em;  
+            width: 100%;
 
             a {  
-                display: block;   
+                display: inline-block;   
                 text-align: center;  
                 padding: 10px 20px;  
                 background-color: $link-color;  
-                color: white;  
+                color: rgb(167, 167, 167);  
                 text-decoration: none;  
                 border-radius: 5px;  
                 font-size: 16px;  
@@ -36,11 +45,13 @@ nav {
                 overflow: hidden;  
                 text-overflow: ellipsis;  
 
+
+
                 &:hover {  
                     background-color: $link-hover-color;  
                     text-decoration: none; 
                     transform: translateY(-2px);  
-                    color: #000000;  
+                    color: #ffffff;  
                 }  
 
                 &:active {  

@@ -33,16 +33,18 @@ footer {
   background-color: #000000;
   padding: 20px;
   color: aliceblue;
+  width: 100%;
+  box-sizing: border-box;
   text-align: center;
 }
 footer a {
-  color: #db4545;
+  color: rgba(93, 4, 4, 0.781);
   font-size: 18px;
   margin: 5px;
   text-decoration: none;
 }
 footer a:hover {
-  color: #2980b9;
+  color: rgba(127, 19, 19, 0.944);
 }
 footer .social-icons {
   margin-top: 10px;
@@ -52,7 +54,7 @@ footer .social-icons a {
   margin: 0 10px;
 }
 footer .social-icons a:hover {
-  color: #2980b9;
+  color: rgba(127, 19, 19, 0.944);
 }
 
 header {
@@ -63,11 +65,6 @@ header {
   padding: 1em;
   width: 100%;
   box-sizing: border-box;
-}
-header img {
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: contain;
 }
 
 nav {
@@ -84,15 +81,23 @@ nav ul {
   list-style: none;
   padding: 0;
 }
+nav ul img {
+  max-height: 120px;
+  max-width: auto;
+  object-fit: contain;
+  display: block;
+  margin: 10px auto 20px auto;
+}
 nav ul li {
   margin-bottom: 1em;
+  width: 100%;
 }
 nav ul li a {
-  display: block;
+  display: inline-block;
   text-align: center;
   padding: 10px 20px;
-  background-color: #db4545;
-  color: white;
+  background-color: rgba(93, 4, 4, 0.781);
+  color: rgb(167, 167, 167);
   text-decoration: none;
   border-radius: 5px;
   font-size: 16px;
@@ -106,10 +111,10 @@ nav ul li a {
   text-overflow: ellipsis;
 }
 nav ul li a:hover {
-  background-color: #2980b9;
+  background-color: rgba(127, 19, 19, 0.944);
   text-decoration: none;
   transform: translateY(-2px);
-  color: #000000;
+  color: #ffffff;
 }
 nav ul li a:active {
   transform: translateY(0);
@@ -130,13 +135,20 @@ nav ul li a:active {
   position: relative;
   align-items: center;
 }
-#producto h1, #producto h2, #producto h3, #producto h4, #producto p, #producto ul, #producto li {
+#producto h1 {
+  font-size: 3em;
+  color: #000000;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.756);
+  text-align: center;
+  padding: 20px;
+}
+#producto h2, #producto h3, #producto h4, #producto p, #producto ul, #producto li {
   margin: 0;
   padding: 0.5em 0;
   text-align: center;
   list-style: none;
 }
-#producto h1:last-of-type, #producto h2:last-of-type, #producto h3:last-of-type, #producto h4:last-of-type, #producto p:last-of-type, #producto ul:last-of-type, #producto li:last-of-type {
+#producto h2:last-of-type, #producto h3:last-of-type, #producto h4:last-of-type, #producto p:last-of-type, #producto ul:last-of-type, #producto li:last-of-type {
   margin-bottom: 0;
 }
 #producto ul {
@@ -156,7 +168,7 @@ html, body {
 #grilla {
   display: grid;
   grid-template-areas: "nav header header" "nav producto aside" "nav footer footer";
-  grid-template-rows: 20% auto 15%;
+  grid-template-rows: 1% auto 15%;
   grid-template-columns: 20% 60% auto;
   height: 100%;
   width: 100%;
@@ -207,8 +219,7 @@ nav {
     width: 100%;
   }
   header {
-    justify-content: center;
-    padding: 1em;
+    display: none;
   }
   header img {
     max-width: 120px;
@@ -250,8 +261,8 @@ nav {
     font-size: 16px;
     padding: 10px 20px;
   }
-  header img {
-    max-width: 150px;
+  header {
+    display: none;
   }
   aside img {
     width: 100%;

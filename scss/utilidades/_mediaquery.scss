@@ -37,8 +37,7 @@
   }
 
   header {
-    justify-content: center; // Centra el logotipo en pantallas pequeñas
-    padding: 1em;
+    display: none;
   }
 
   header img {
@@ -102,8 +101,8 @@
     padding: 10px 20px;
   }
 
-  header img {
-    max-width: 150px;
+  header{
+    display: none;
   }
 
   aside img {

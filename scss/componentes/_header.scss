@@ -1,17 +1,11 @@
 @import "../utilidades/variables";
 @import "../utilidades/mixins";
 
-// _header.scss  
+// _header.scss
 header {  
     @include flex-center; // Usando mixin de flex  
     background-color: $header-background;  
     padding: 1em;  
     width: 100%;  
     box-sizing: border-box;  
-
-    img {  
-        max-height: 100%;  
-        max-width: 100%;  
-        object-fit: contain;  
-    }  
 }
