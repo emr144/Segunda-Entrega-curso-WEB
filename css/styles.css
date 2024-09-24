@@ -2,6 +2,7 @@ aside {
   position: relative;
   overflow: hidden;
   padding: 0;
+  min-height: 200px;
 }
 aside img {
   width: 100%;
@@ -226,8 +227,8 @@ nav {
     height: auto;
   }
   aside img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
   }
   .animacion-activa {
     background-image: url("../img/antes.jpg");
